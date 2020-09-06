@@ -14,6 +14,13 @@ AStarting_Point::AStarting_Point()
 
 }
 
+AStarting_Point::~AStarting_Point()
+{
+	PController = nullptr;
+
+	delete PController;
+}
+
 // Called when the game starts or when spawned
 void AStarting_Point::BeginPlay()
 {

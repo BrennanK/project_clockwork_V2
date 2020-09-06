@@ -20,6 +20,12 @@ ATeleporter::ATeleporter(const FObjectInitializer& ObjectInitializer) : Super(Ob
 //	collider->OnComponentBeginOverlap.AddDynamic(this, &ATeleporter::Teleport);
 }
 
+ATeleporter::~ATeleporter()
+{
+	collider = nullptr;
+	delete collider;
+}
+
 // Called when the game starts or when spawned
 void ATeleporter::BeginPlay()
 {

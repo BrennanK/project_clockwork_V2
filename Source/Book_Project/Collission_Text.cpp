@@ -21,6 +21,14 @@ ACollission_Text::ACollission_Text(const FObjectInitializer &ObjectInitializer) 
 	triggerBox->OnComponentBeginOverlap.AddDynamic(this, &ACollission_Text::Collision);
 	//triggerBox->OnComponentEndOverlap.AddDynamic(this, &ACollission_Text::EndCollision);
 }
+ACollission_Text::~ACollission_Text()
+{
+	triggerBox = nullptr;
+	player = nullptr;
+
+	delete triggerBox;
+	delete player;
+}
 // Called when the game starts or when spawned
 void ACollission_Text::BeginPlay()
 {

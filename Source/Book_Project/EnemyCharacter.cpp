@@ -20,6 +20,20 @@ AEnemyCharacter::AEnemyCharacter(const FObjectInitializer &ObjectInitializer):Su
 
 }
 
+AEnemyCharacter::~AEnemyCharacter()
+{
+	BotBehavior = nullptr;
+	skeleton = nullptr;
+	capsuleCollider = nullptr;
+
+	delete BotBehavior;
+	delete skeleton;
+	delete capsuleCollider;
+
+}
+
+
+
 // Called when the game starts or when spawned
 void AEnemyCharacter::BeginPlay()
 {

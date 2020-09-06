@@ -23,6 +23,16 @@ ADeathBounds::ADeathBounds(const FObjectInitializer &ObjectInitializer) :Super(O
 	deathBox->AttachTo(RootComponent);
 	deathBox->OnComponentBeginOverlap.AddDynamic(this, &ADeathBounds::Collision);
 }
+ADeathBounds::~ADeathBounds()
+{
+	deathBox = nullptr;
+	gameInstance = nullptr;
+	player = nullptr;
+
+	delete deathBox;
+	delete gameInstance;
+	delete player;
+}
 // Called when the game starts or when spawned
 void ADeathBounds::BeginPlay()
 {

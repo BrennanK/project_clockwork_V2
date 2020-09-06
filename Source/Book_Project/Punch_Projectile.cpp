@@ -27,6 +27,15 @@ APunch_Projectile::APunch_Projectile(const FObjectInitializer &ObjectInitializer
 	projectileCollider->OnComponentBeginOverlap.AddDynamic(this, &APunch_Projectile::Collision);
 }
 
+APunch_Projectile::~APunch_Projectile()
+{
+	projectileCollider = nullptr;
+	mesh = nullptr;
+
+	delete projectileCollider;
+	delete mesh;
+}
+
 // Called when the game starts or when spawned
 void APunch_Projectile::BeginPlay()
 {

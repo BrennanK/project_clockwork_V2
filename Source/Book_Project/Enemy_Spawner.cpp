@@ -14,6 +14,12 @@ AEnemy_Spawner::AEnemy_Spawner()
 
 }
 
+AEnemy_Spawner::~AEnemy_Spawner()
+{
+	SpawnedActorRef = nullptr;
+	delete SpawnedActorRef;
+}
+
 // Called when the game starts or when spawned
 void AEnemy_Spawner::BeginPlay()
 {

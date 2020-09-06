@@ -25,6 +25,17 @@ AEnergy_Restorer::AEnergy_Restorer(const FObjectInitializer &ObjectInitializer):
 	sphereCollider->OnComponentEndOverlap.AddDynamic(this, &AEnergy_Restorer::EndCollision);
 }
 
+AEnergy_Restorer::~AEnergy_Restorer()
+{
+	restorationParticle = nullptr;
+	sphereCollider = nullptr;
+	player = nullptr;
+
+	delete player;
+	delete sphereCollider;
+	delete restorationParticle;
+}
+
 void AEnergy_Restorer::BeginPlay()
 {
 	Super::BeginPlay();

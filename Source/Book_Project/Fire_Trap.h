@@ -17,6 +17,7 @@ class BOOK_PROJECT_API AFire_Trap : public AManipulable_Object
 	public:
 		AFire_Trap();
 		AFire_Trap(const FObjectInitializer &ObjectInitializer);
+		~AFire_Trap();
 
 		UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Components of Trap")
 			class UBoxComponent* fireBox;

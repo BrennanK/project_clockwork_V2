@@ -23,6 +23,15 @@ UCollsion_Actor_Component::UCollsion_Actor_Component(const FObjectInitializer &O
 	triggerBox->OnComponentBeginOverlap.AddDynamic(this, &UCollsion_Actor_Component::Collision);
 }
 
+UCollsion_Actor_Component::~UCollsion_Actor_Component()
+{
+	mesh = nullptr;
+	triggerBox = nullptr;
+
+	delete mesh;
+	delete triggerBox;
+}
+
 // Called when the game starts
 void UCollsion_Actor_Component::BeginPlay()
 {

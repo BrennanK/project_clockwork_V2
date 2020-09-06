@@ -16,7 +16,7 @@ class BOOK_PROJECT_API ALock_On_Actor : public AManipulable_Object
 	
 	public:
 		ALock_On_Actor();
-		
+		~ALock_On_Actor();
 		UPROPERTY(EditAnywhere,BlueprintReadWrite,Category = "Lock-On properties")
 			FVector VectorOffset;
 

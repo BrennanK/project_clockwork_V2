@@ -15,8 +15,7 @@ public:
 	// Sets default values for this character's properties
 	AAvatar();
 	AAvatar(const FObjectInitializer& ObjectInitializer);
-	TMap<FString, int> Backpack;
-	TMap<FString, UTexture2D*> Icons;
+	~AAvatar();
 	bool inventoryShowing;
 	UPROPERTY(BlueprintReadWrite)
 		ECharacterState currentState;
@@ -198,7 +197,6 @@ public:
 	
 	void Jump();
 	
-	void printContentsOfBackpackOnScreen();
 	
 	void TouchStarted(ETouchIndex::Type FingerIndex, FVector Location);
 

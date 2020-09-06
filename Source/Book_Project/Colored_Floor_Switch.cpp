@@ -19,6 +19,16 @@ AColored_Floor_Switch::AColored_Floor_Switch(const FObjectInitializer& ObjectIni
 	floorBox->OnComponentBeginOverlap.AddDynamic(this, &AColored_Floor_Switch::Collision);
 
 }
+AColored_Floor_Switch::~AColored_Floor_Switch()
+{
+	floorBox = nullptr;
+	Mesh = nullptr;
+	switchManager = nullptr;
+
+	delete floorBox;
+	delete Mesh;
+	delete switchManager;
+}
 // Sets default values
 
 

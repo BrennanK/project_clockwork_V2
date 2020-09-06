@@ -17,7 +17,7 @@ class BOOK_PROJECT_API ANewBounce_Pad : public AManipulable_Object
 	public:
 		ANewBounce_Pad();
 		ANewBounce_Pad(const FObjectInitializer& ObjectInitializer);
-
+		~ANewBounce_Pad();
 
 		UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Components")
 			class UBoxComponent* bounceBox;

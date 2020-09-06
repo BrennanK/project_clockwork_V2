@@ -17,7 +17,7 @@ class BOOK_PROJECT_API ATrap_Door : public AManipulable_Object
 	public:
 		ATrap_Door();
 		ATrap_Door(const FObjectInitializer &ObjectInitializer);
-
+		~ATrap_Door();
 		FRotator orginalRotation;
 
 		UPROPERTY(EditAnywhere, Category = "Rotation Variances")

@@ -15,7 +15,7 @@ public:
 	// Sets default values for this actor's properties
 	ADistortion_Fragments();
 	ADistortion_Fragments(const FObjectInitializer& ObjectInitializer);
-
+	~ADistortion_Fragments();
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Collectible Properties")
 		class USphereComponent* sphereCollider;
 

@@ -15,7 +15,7 @@ public:
 	// Sets default values for this actor's properties
 	ADeathBounds();
 	ADeathBounds(const FObjectInitializer &ObjectInitializer);
-
+	~ADeathBounds();
 	FVector locationToSet;
 	FRotator rotationToSet;
 

@@ -15,7 +15,7 @@ public:
 	// Sets default values for this actor's properties
 	AInteractable_Object();
 	AInteractable_Object(const FObjectInitializer &ObjectInitializer);
-
+	~AInteractable_Object();
 	UPROPERTY(EditAnywhere, Category = "Actor to Spawn")
 		TArray<AActor*> ActorToInfluence;
 

@@ -26,6 +26,15 @@ AWorking_Bouncepad::AWorking_Bouncepad(const FObjectInitializer& ObjectInitializ
 	//bounceBox->OnComponentEndOverlap.AddDynamic(this, &AWorking_Bouncepad::EndCollision);
 }
 
+AWorking_Bouncepad::~AWorking_Bouncepad()
+{
+	bounceBox = nullptr;
+	Mesh = nullptr;
+
+	delete bounceBox;
+	delete Mesh;
+}
+
 // Called when the game starts or when spawned
 void AWorking_Bouncepad::BeginPlay()
 {

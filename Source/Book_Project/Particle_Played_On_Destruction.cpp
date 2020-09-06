@@ -12,6 +12,12 @@ AParticle_Played_On_Destruction::AParticle_Played_On_Destruction()
 
 }
 
+AParticle_Played_On_Destruction::~AParticle_Played_On_Destruction()
+{
+	particle = nullptr;
+	delete particle;
+}
+
 // Called when the game starts or when spawned
 void AParticle_Played_On_Destruction::BeginPlay()
 {

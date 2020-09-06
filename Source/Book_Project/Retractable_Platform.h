@@ -17,7 +17,7 @@ class BOOK_PROJECT_API ARetractable_Platform : public AManipulable_Object
 	public:
 		ARetractable_Platform();
 		ARetractable_Platform(const FObjectInitializer &ObjectInitializer);
-
+		~ARetractable_Platform();
 		UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Mesh of The Moving Platform")
 			class UStaticMeshComponent* movingMesh;
 

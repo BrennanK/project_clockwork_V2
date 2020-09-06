@@ -22,6 +22,11 @@ ACheckpoint::ACheckpoint(const FObjectInitializer &ObjectInitializer): Super(Obj
 	checkBox->AttachTo(RootComponent);
 	checkBox->OnComponentBeginOverlap.AddDynamic(this, &ACheckpoint::Collision);
 }
+ACheckpoint::~ACheckpoint()
+{
+	checkBox = nullptr;
+	delete checkBox;
+}
 // Called when the game starts or when spawned
 void ACheckpoint::BeginPlay()
 {

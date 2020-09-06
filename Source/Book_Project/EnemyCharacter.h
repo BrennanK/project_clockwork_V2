@@ -15,6 +15,7 @@ public:
 	// Sets default values for this character's properties
 	AEnemyCharacter();
 	AEnemyCharacter(const FObjectInitializer &ObjectInitializer);
+	~AEnemyCharacter();
 	UPROPERTY(EditAnywhere, Category = "Behavior")
 		class UBehaviorTree *BotBehavior;
 

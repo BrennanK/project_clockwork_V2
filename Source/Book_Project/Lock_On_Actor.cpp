@@ -13,6 +13,12 @@ ALock_On_Actor::ALock_On_Actor()
 	PrimaryActorTick.bCanEverTick = true;
 }
 
+ALock_On_Actor::~ALock_On_Actor()
+{
+	player = nullptr;
+	delete player;
+}
+
 void ALock_On_Actor::BeginPlay()
 {
 	Super::BeginPlay();

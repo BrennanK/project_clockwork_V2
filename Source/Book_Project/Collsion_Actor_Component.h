@@ -16,7 +16,7 @@ public:
 	// Sets default values for this component's properties
 	UCollsion_Actor_Component();
 	UCollsion_Actor_Component(const FObjectInitializer &ObjectInitializer);
-
+	~UCollsion_Actor_Component();
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Collison Component Pieces")
 		class UBoxComponent* triggerBox;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Collision Component Pieces")

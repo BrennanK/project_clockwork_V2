@@ -24,6 +24,14 @@ ANewBounce_Pad::ANewBounce_Pad(const FObjectInitializer& ObjectInitializer):Supe
 	bounceBox->OnComponentBeginOverlap.AddDynamic(this, &ANewBounce_Pad::Collision);
 	bounceBox->OnComponentEndOverlap.AddDynamic(this, &ANewBounce_Pad::EndCollision);
 }
+ANewBounce_Pad::~ANewBounce_Pad()
+{
+	bounceBox = nullptr;
+	Mesh = nullptr;
+
+	delete bounceBox;
+	delete Mesh;
+}
 void ANewBounce_Pad::BeginPlay()
 {
 	Super::BeginPlay();

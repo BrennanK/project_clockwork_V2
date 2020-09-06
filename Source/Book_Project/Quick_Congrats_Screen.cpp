@@ -21,6 +21,12 @@ AQuick_Congrats_Screen::AQuick_Congrats_Screen(const FObjectInitializer &ObjectI
 	boxCollider->OnComponentBeginOverlap.AddDynamic(this, &AQuick_Congrats_Screen::Collision);
 }
 
+AQuick_Congrats_Screen::~AQuick_Congrats_Screen()
+{
+	boxCollider = nullptr;
+	delete boxCollider;
+}
+
 // Called when the game starts or when spawned
 void AQuick_Congrats_Screen::BeginPlay()
 {

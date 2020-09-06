@@ -15,7 +15,7 @@ public:
 	// Sets default values for this actor's properties
 	ADestructable_Wall();
 	ADestructable_Wall(const FObjectInitializer &ObjectInitializer);
-
+	~ADestructable_Wall();
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Wall Collider")
 		class UBoxComponent* destructionBox;
 protected:

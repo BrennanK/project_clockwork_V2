@@ -40,6 +40,29 @@ AAvatar::AAvatar(const FObjectInitializer& ObjectInitializer)
 	PrimaryActorTick.bCanEverTick = true;
 }
 
+AAvatar::~AAvatar()
+{
+	capsuleA = nullptr;
+	skeleton = nullptr;
+	playerCamera = nullptr;
+	cameraBoom = nullptr;
+	teleportationParticle = nullptr;
+	ourSpline = nullptr;
+	playerTarget = nullptr;
+	textCollider = nullptr;
+	interactable = nullptr;
+
+	delete capsuleA;
+	delete skeleton;
+	delete playerCamera;
+	delete cameraBoom;
+	delete teleportationParticle;
+	delete ourSpline;
+	delete playerTarget;
+	delete textCollider;
+	delete interactable;
+}
+
 // Called when the game starts or when spawned
 void AAvatar::BeginPlay()
 {
@@ -464,14 +487,7 @@ void AAvatar::LookUpAtRate(float Rate) // Method for camera rotation on Y-axis
 	
 }
 
-void AAvatar::printContentsOfBackpackOnScreen() // debug method of printing packpack contents
-{
-	int count = 0;
-	for (TMap<FString, int>::TIterator it = Backpack.CreateIterator(); it; ++it)  // Iterator to print backpack contents
-	{
-		GEngine->AddOnScreenDebugMessage(count++, 5.f, FColor::Green, it->Key + ": " + FString::FromInt(it->Value));
-	}
-}
+
 
 void AAvatar::TouchStarted(ETouchIndex::Type FingerIndex, FVector Location)  // method for allowing player character jump for touch screen
 {

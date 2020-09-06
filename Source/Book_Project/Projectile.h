@@ -15,6 +15,7 @@ public:
 	// Sets default values for this actor's properties
 	AProjectile();
 	AProjectile(const FObjectInitializer &ObjectInitializer);
+	~AProjectile();
 	UPROPERTY(EditAnywhere, Category = "Projectile Variables")
 		float callSpeed;
 

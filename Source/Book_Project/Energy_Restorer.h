@@ -17,7 +17,7 @@ class BOOK_PROJECT_API AEnergy_Restorer : public AManipulable_Object
 	public:
 		AEnergy_Restorer();
 		AEnergy_Restorer(const FObjectInitializer &ObjectInitializer);
-
+		~AEnergy_Restorer();
 		UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Energy Restoration Properties")
 			class UParticleSystemComponent* restorationParticle;
 

@@ -13,6 +13,12 @@ ARetractable_Platform::ARetractable_Platform(const FObjectInitializer &ObjectIni
 	
 }
 
+ARetractable_Platform::~ARetractable_Platform()
+{
+	movingMesh = nullptr;
+	delete movingMesh;
+}
+
 void ARetractable_Platform::BeginPlay()
 {
 	Super::BeginPlay();

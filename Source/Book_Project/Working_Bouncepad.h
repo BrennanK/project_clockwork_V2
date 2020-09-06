@@ -15,7 +15,7 @@ public:
 	// Sets default values for this actor's properties
 	AWorking_Bouncepad();
 	AWorking_Bouncepad(const FObjectInitializer& ObjectInitializer);
-
+	~AWorking_Bouncepad();
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly,Category = "Components")
 		class UBoxComponent* bounceBox;

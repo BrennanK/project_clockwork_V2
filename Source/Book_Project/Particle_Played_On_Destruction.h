@@ -14,7 +14,7 @@ class BOOK_PROJECT_API AParticle_Played_On_Destruction : public AActor
 public:	
 	// Sets default values for this actor's properties
 	AParticle_Played_On_Destruction();
-
+	~AParticle_Played_On_Destruction();
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Particle To Be Played On Actor Destruction")
 		class UParticleSystemComponent* particle;
 

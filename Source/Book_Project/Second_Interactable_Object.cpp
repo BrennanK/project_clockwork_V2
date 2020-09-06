@@ -23,6 +23,15 @@ ASecond_Interactable_Object::ASecond_Interactable_Object(const FObjectInitialize
 	Box->OnComponentEndOverlap.AddDynamic(this, &AInteractable_Object::EndCollision); 
 }
 
+ASecond_Interactable_Object::~ASecond_Interactable_Object()
+{
+	Box = nullptr;
+	model = nullptr;
+
+	delete Box;
+	delete model;
+}
+
 void ASecond_Interactable_Object::BeginPlay()
 {
 	

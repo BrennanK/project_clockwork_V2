@@ -25,6 +25,17 @@ ADistortion_Fragments::ADistortion_Fragments(const FObjectInitializer& ObjectIni
 	sphereCollider->OnComponentBeginOverlap.AddDynamic(this, &ADistortion_Fragments::Collision);
 }
 
+ADistortion_Fragments::~ADistortion_Fragments()
+{
+	sphereCollider = nullptr;
+	Mesh = nullptr;
+	UI_Data_Container = nullptr;
+
+	delete sphereCollider;
+	delete Mesh;
+	delete UI_Data_Container;
+}
+
 // Called when the game starts or when spawned
 void ADistortion_Fragments::BeginPlay()
 {

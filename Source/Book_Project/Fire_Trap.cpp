@@ -29,6 +29,17 @@ AFire_Trap::AFire_Trap(const FObjectInitializer &ObjectInitializer):Super(Object
 	fireBox->OnComponentBeginOverlap.AddDynamic(this, &AFire_Trap::Collision);
 }
 
+AFire_Trap::~AFire_Trap()
+{
+	fireBox = nullptr;
+	fireParticle = nullptr;
+	waterParticle = nullptr;
+
+	delete fireBox;
+	delete fireParticle;
+	delete waterParticle;
+}
+
 void AFire_Trap::BeginPlay()
 {
 	Super::BeginPlay();

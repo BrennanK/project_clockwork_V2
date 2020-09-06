@@ -15,7 +15,7 @@ public:
 	// Sets default values for this actor's properties
 	AQuick_Congrats_Screen();
 	AQuick_Congrats_Screen(const FObjectInitializer &ObjectInitializer);
-
+	~AQuick_Congrats_Screen();
 	UPROPERTY(EditAnywhere, Category = "Congrats Collider")
 		class UBoxComponent* boxCollider;
 

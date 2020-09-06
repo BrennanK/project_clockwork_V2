@@ -15,6 +15,7 @@ public:
 	// Sets default values for this actor's properties
 	AColored_Floor_Switch();
 	AColored_Floor_Switch(const FObjectInitializer& ObjectInitializer);
+	~AColored_Floor_Switch();
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Item")
 		class UBoxComponent* floorBox;
 

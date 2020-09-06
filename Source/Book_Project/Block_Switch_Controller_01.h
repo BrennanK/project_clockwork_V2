@@ -15,7 +15,7 @@ public:
 	// Sets default values for this actor's properties
 	ABlock_Switch_Controller_01();
 	ABlock_Switch_Controller_01(const FObjectInitializer &ObjectInitializer);
-	
+	~ABlock_Switch_Controller_01();
 	UPROPERTY(EditAnywhere,BlueprintReadWrite, Category = "Animated Door")
 		class UStaticMeshComponent* door;
 

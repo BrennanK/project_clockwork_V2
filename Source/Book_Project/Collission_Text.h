@@ -15,7 +15,7 @@ public:
 	// Sets default values for this actor's properties
 	ACollission_Text();
 	ACollission_Text(const FObjectInitializer &ObjectInitializer);
-
+	~ACollission_Text();
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Text Detector")
 		class UBoxComponent* triggerBox;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Text Variables")

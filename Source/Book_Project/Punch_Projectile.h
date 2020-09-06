@@ -15,6 +15,8 @@ public:
 	// Sets default values for this actor's properties
 	APunch_Projectile();
 	APunch_Projectile(const FObjectInitializer &ObjectInitializer);
+	~APunch_Projectile();
+
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Projectile Variables")
 		class USphereComponent* projectileCollider;
 

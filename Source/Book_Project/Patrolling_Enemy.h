@@ -16,7 +16,7 @@ class BOOK_PROJECT_API APatrolling_Enemy : public AEnemyCharacter
 	
 	public:
 		APatrolling_Enemy(const FObjectInitializer &ObjectInitializer);
-		
+		~APatrolling_Enemy();
 		UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Blast Zone")
 			class USphereComponent* explosionRadius;
 

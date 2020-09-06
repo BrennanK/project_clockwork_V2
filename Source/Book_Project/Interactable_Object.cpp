@@ -18,6 +18,14 @@ AInteractable_Object::AInteractable_Object(const FObjectInitializer &ObjectIniti
 {
 	
 }
+AInteractable_Object::~AInteractable_Object()
+{
+	for (int i = 0; i < ActorToInfluence.Num(); i++)
+	{
+		ActorToInfluence[i] = nullptr;
+		delete ActorToInfluence[i];
+	}
+}
 // Called when the game starts or when spawned
 void AInteractable_Object::BeginPlay()
 {

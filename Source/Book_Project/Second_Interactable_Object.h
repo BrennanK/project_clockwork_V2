@@ -18,7 +18,7 @@ class BOOK_PROJECT_API ASecond_Interactable_Object : public AInteractable_Object
 public:
 	ASecond_Interactable_Object();
 	ASecond_Interactable_Object(const FObjectInitializer &ObjectInitializer);
-
+	~ASecond_Interactable_Object();
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Interactable Properties")
 		class UBoxComponent* Box;
 

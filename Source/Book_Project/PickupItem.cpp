@@ -38,7 +38,7 @@ void APickupItem::Prox(UPrimitiveComponent * OverlappedComp, AActor * OtherActor
 	ANPC_HUD* hud = Cast<ANPC_HUD>(PController->GetHUD());
 
 	GEngine->AddOnScreenDebugMessage(0, 7.f, FColor::Blue, "Picked up" + FString::FromInt(Quantity) + " " + Name);
-	avatar->printContentsOfBackpackOnScreen();
+	//avatar->printContentsOfBackpackOnScreen();
 	Destroy();
 }
 

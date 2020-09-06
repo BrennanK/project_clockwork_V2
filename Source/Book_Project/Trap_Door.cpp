@@ -19,6 +19,15 @@ ATrap_Door::ATrap_Door(const FObjectInitializer &ObjectInitializer)
 	activationBox->OnComponentBeginOverlap.AddDynamic(this,&ATrap_Door::Collision);
 }
 
+ATrap_Door::~ATrap_Door()
+{
+	rotatingMesh = nullptr;
+	activationBox = nullptr;
+
+	delete rotatingMesh;
+	delete activationBox;
+}
+
 void ATrap_Door::BeginPlay()
 {
 	Super::BeginPlay();

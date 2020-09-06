@@ -15,6 +15,7 @@ public:
 	// Sets default values for this actor's properties
 	ATeleporter();
 	ATeleporter(const FObjectInitializer& ObjectInitializer);
+	~ATeleporter();
 	UPROPERTY(EditAnywhere,Category="Destination")
 	FVector locationtoGoTo;
 

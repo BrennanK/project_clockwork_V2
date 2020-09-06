@@ -82,6 +82,17 @@ void APatrolling_Enemy::BeginPlay()
 	//GEngine->AddOnScreenDebugMessage(-1, 6.f, FColor::Purple, "Our begin play for the patrol character is functioning");
 }
 
+APatrolling_Enemy::~APatrolling_Enemy()
+{
+	explosionRadius = nullptr;
+	spawner = nullptr;
+	playerCharacter = nullptr;
+
+	delete explosionRadius;
+	delete spawner;
+	delete wall;
+}
+
 void APatrolling_Enemy::initiateSpeedChange()
 {
 	changeSpeedOfBlink();

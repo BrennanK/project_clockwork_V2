@@ -18,6 +18,12 @@ ADestructable_Wall::ADestructable_Wall(const FObjectInitializer &ObjectInitializ
 	destructionBox->AttachTo(RootComponent);
 }
 
+ADestructable_Wall::~ADestructable_Wall()
+{
+	destructionBox = nullptr;
+	delete destructionBox;
+}
+
 // Called when the game starts or when spawned
 void ADestructable_Wall::BeginPlay()
 {

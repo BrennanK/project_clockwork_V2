@@ -27,6 +27,13 @@ AProjectile::AProjectile(const FObjectInitializer &ObjectInitializer) : Super(Ob
 	projectileCollider->AttachTo(mesh);
 	projectileCollider->OnComponentBeginOverlap.AddDynamic(this, &AProjectile::Collision);
 }
+AProjectile::~AProjectile()
+{
+	projectileCollider = nullptr;
+	mesh = nullptr;
+	delete projectileCollider;
+	delete mesh;
+}
 // Called when the game starts or when spawned
 void AProjectile::BeginPlay()
 {

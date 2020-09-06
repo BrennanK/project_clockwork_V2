@@ -21,6 +21,20 @@ ABlock_Switch_Controller_01::ABlock_Switch_Controller_01(const FObjectInitialize
 	//door->AttachTo(RootComponent);
 
 }
+ABlock_Switch_Controller_01::~ABlock_Switch_Controller_01()
+{
+	door = nullptr;
+	for (int i = 0; i < switches.Num(); i++)
+	{
+		switches[i] = nullptr;
+		delete switches[i];
+	}
+	cameraMan = nullptr;
+
+	delete door;
+	delete cameraMan;
+
+}
 // Called when the game starts or when spawned
 void ABlock_Switch_Controller_01::BeginPlay()
 {

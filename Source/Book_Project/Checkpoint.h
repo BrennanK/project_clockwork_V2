@@ -15,7 +15,7 @@ public:
 	// Sets default values for this actor's properties
 	ACheckpoint();
 	ACheckpoint(const FObjectInitializer &ObjectInitializer);
-
+	~ACheckpoint();
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Checkpoint Border")
 		class UBoxComponent* checkBox;
 protected:

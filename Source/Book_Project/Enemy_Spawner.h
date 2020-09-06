@@ -14,7 +14,7 @@ class BOOK_PROJECT_API AEnemy_Spawner : public AActor
 public:	
 	// Sets default values for this actor's properties
 	AEnemy_Spawner();
-
+	~AEnemy_Spawner();
 	UPROPERTY(EditAnywhere, Category = "Enemy to Spawn")
 		TSubclassOf<AEnemyCharacter> EnemyToSpawn;
 
